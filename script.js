@@ -53,7 +53,21 @@ function initialize() {
   if (!localStorage.getItem('goals')) write('goals', [{ id: Date.now(), name: 'Emergency Fund', target: 25000, current: 5000, months: 6 }]);
   rolloverMonth(); document.body.classList.toggle('dark-mode', localStorage.getItem('theme') === 'dark');
   setupThemeSwitch();
+  setupSidebarToggle();
   setupDashboardNavigation();
+}
+function setupSidebarToggle() {
+  const button = $('sidebar-toggle');
+  if (!button) return;
+  const setCollapsed = collapsed => {
+    document.body.classList.toggle('sidebar-collapsed', collapsed);
+    button.setAttribute('aria-expanded', String(!collapsed));
+    button.setAttribute('aria-label', collapsed ? 'Expand sidebar' : 'Collapse sidebar');
+    button.title = collapsed ? 'Expand sidebar' : 'Collapse sidebar';
+    localStorage.setItem('sidebarCollapsed', String(collapsed));
+  };
+  setCollapsed(localStorage.getItem('sidebarCollapsed') === 'true');
+  button.addEventListener('click', () => setCollapsed(!document.body.classList.contains('sidebar-collapsed')));
 }
 function setupThemeSwitch() {
   const lightButton = $('light-mode-btn'), darkButton = $('dark-mode-btn');
