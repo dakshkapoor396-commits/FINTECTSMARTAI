@@ -165,3 +165,5 @@ function importBackup(event){const file=event.target.files[0];if(!file)return;co
 
 initialize();renderDashboard();renderExpenses();renderBudgets();renderGoals();renderSettings();renderHouseholdSettings();
 window.addEventListener('storage', event=>{if(['allowance','budgets','expenses','goals','householdMembers'].includes(event.key))renderDashboard();});
+
+
