@@ -9,4 +9,11 @@
                 <li><a href="goals.html">🎯 Goals</a></li>
                 <li><a href="settings.html">⚙️ Settings</a></li>
             </ul>
+            <div class="sidebar-theme" aria-label="Appearance settings">
+                <span class="sidebar-theme-label">Appearance</span>
+                <div class="theme-switch" role="group" aria-label="Color theme">
+                    <button id="light-mode-btn" class="theme-option" type="button" aria-pressed="true">Light</button>
+                    <button id="dark-mode-btn" class="theme-option" type="button" aria-pressed="false">Dark</button>
+                </div>
+            </div>
         </aside><main class="main-content"><div class="page-header"><p class="eyebrow">Your money, clearly</p><h1>Overview</h1><p>Your financial summary and smart insights for this month.</p></div><div class="grid-3"><div class="card metric-card"><h3>Household Budget</h3><h2 id="dash-allowance">₹0</h2></div><div class="card metric-card"><h3>Total Spent</h3><h2 id="dash-total-spent">₹0</h2></div><div class="card card-primary"><h3>Today's Safe Limit</h3><h2 id="dash-safe-limit">₹0</h2><p id="dash-days-left">0 days left</p></div></div><div class="grid-2"><div class="card"><h3>Smart alerts</h3><div id="alerts-container"></div></div><div class="card"><h3>Household contributions</h3><div id="household-summary" class="simple-list"></div></div><div class="card"><h3>Spending by category</h3><div id="category-chart" class="chart-list"></div></div><div class="card"><h3>Monthly spending trend</h3><div id="trend-chart" class="chart-list"></div></div><div class="card"><h3>Savings-goal progress</h3><div id="goal-chart" class="chart-list"></div></div><div class="card"><h3>Saving streak</h3><div id="streak-card" class="streak-card"></div></div></div></main></div><script src="script.js"></script></body></html>

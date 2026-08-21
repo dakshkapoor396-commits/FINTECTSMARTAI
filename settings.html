@@ -19,6 +19,13 @@
                 <li><a href="goals.html">🎯 Goals</a></li>
                 <li><a href="settings.html" class="active">⚙️ Settings</a></li>
             </ul>
+            <div class="sidebar-theme" aria-label="Appearance settings">
+                <span class="sidebar-theme-label">Appearance</span>
+                <div class="theme-switch" role="group" aria-label="Color theme">
+                    <button id="light-mode-btn" class="theme-option" type="button" aria-pressed="true">Light</button>
+                    <button id="dark-mode-btn" class="theme-option" type="button" aria-pressed="false">Dark</button>
+                </div>
+            </div>
         </aside>
 
         <!-- Main Content -->
@@ -88,12 +95,11 @@
                 </div>
                 <div class="card">
                     <h3>Data & Appearance</h3>
-                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">Export a backup, restore a previous backup, or change the theme.</p>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">Export a backup or restore a previous backup.</p>
                     <div class="settings-actions">
                         <button id="export-data-btn" class="btn-small btn-accept" type="button">Export CSV</button>
                         <button id="export-backup-btn" class="btn-small btn-reject" type="button">Download backup</button>
                         <label class="btn-small btn-reject file-button">Import data<input id="import-data-input" type="file" accept="application/json"></label>
-                        <button id="theme-toggle-btn" class="btn-small btn-reject" type="button">Toggle dark mode</button>
                     </div>
                 </div>
             </div>

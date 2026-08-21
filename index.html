@@ -1,42 +1,321 @@
 <!doctype html>
-<html lang="en" class="theme-dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#050816" />
-  <meta name="description" content="FinSmart helps you track expenses, automate budgets, and predict your financial future with pure logic and control." />
-  <title>FinSmart | Smart Finance Tracker</title>
-  <link rel="stylesheet" href="landing.css" />
-</head>
-<body>
-  <main class="fin-app" id="top">
-    <div class="ambient-grid" aria-hidden="true"></div>
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true">✦</span> FinSmart</a>
-      <div class="nav-links"><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="home.html" class="btn-nav">Open Dashboard <span aria-hidden="true">→</span></a></div>
-    </nav>
-    <header class="hero">
-      <div class="hero-content reveal">
-        <div class="badge"><span class="pulse-dot"></span> Rule-based intelligence</div>
-        <h1>Master Your Money with <span class="text-gradient">Mathematical Precision</span></h1>
-        <p>Track expenses, automate budgets, and predict your financial future without relying on AI. Pure logic, pure control.</p>
-        <div class="hero-buttons"><a href="home.html" class="btn-primary-large">Start Tracking Free <span>→</span></a><a href="#features" class="btn-secondary-large">Explore features</a></div>
-        <div class="trust-row"><span>⌁</span> Your data stays private <i></i> <span>ϟ</span> Built for clarity</div>
-      </div>
-      <div class="hero-3d-container" id="scene" aria-label="FinSmart dashboard preview">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="coin coin-a">₹</div><div class="coin coin-b">+</div><div class="orb orb-a"></div><div class="orb orb-b"></div>
-        <div class="dashboard-mockup">
-          <div class="mockup-header"><div class="dots"><i></i><i></i><i></i></div><span>finsmart / overview</span><span class="live"><b></b> live</span></div>
-          <div class="mockup-body"><div class="dash-top"><div><small>available balance</small><strong>₹24,860<span>.40</span></strong><em>↑ 12.8% <small>this month</small></em></div><div class="balance-icon">⌂</div></div>
-            <div class="dash-grid"><div class="dash-panel chart-panel"><div class="panel-title"><span>Cash flow</span><small>Last 30 days⌄</small></div><div class="chart"><div class="chart-line"></div><div class="bar h-1"></div><div class="bar h-2"></div><div class="bar h-3"></div><div class="bar h-4"></div><div class="bar h-5"></div><div class="bar h-6"></div><div class="bar h-7"></div></div><div class="chart-labels"><span>01 Jun</span><span>15 Jun</span><span>30 Jun</span></div></div><div class="dash-panel savings-panel"><div class="panel-title"><span>Monthly goal</span><span>◎</span></div><div class="ring"><strong>72<span>%</span></strong></div><p>₹7,200 of ₹10,000</p><small>₹2,800 left to save</small></div></div>
-            <div class="alert-panel"><div class="alert-icon">▥</div><div><strong>Food budget alert</strong><span>You are at 85% of your limit</span></div><b>₹1,275 <small>/ ₹1,500</small></b></div>
-          </div>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>FinSmart — Precision Finance</title>
+        <meta
+            name="description"
+            content="FinSmart helps you master your money with mathematical precision through forecasting, budgeting, and portfolio clarity."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="Landing.css" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <div class="ambient-bg" aria-hidden="true">
+            <div class="blob blob-a"></div>
+            <div class="blob blob-b"></div>
+            <div class="ring ring-a"></div>
+            <div class="ring ring-b"></div>
+            <div class="noise"></div>
+            <div class="grid-overlay"></div>
+            <div class="particles" id="particles"></div>
         </div>
-      </div>
-    </header>
-    <section class="features" id="features" aria-labelledby="features-title"><div class="section-heading reveal"><div class="badge">Everything in one place</div><h2 id="features-title">Explore smarter ways to <span class="text-gradient">manage your money</span></h2><p>Simple tools, clear insights, and practical guardrails for every financial decision.</p></div><div class="feature-grid"><article class="feature-card reveal"><div class="feature-icon">▣</div><h3>Expense tracking</h3><p>Log every purchase in seconds and understand exactly where your money goes.</p><span class="card-arrow">→</span></article><article class="feature-card featured reveal"><div class="feature-icon">◉</div><h3>Smart budgets</h3><p>Set category limits and receive a clear alert before you exceed them.</p><span class="card-arrow">→</span></article><article class="feature-card reveal"><div class="feature-icon">⌁</div><h3>Financial forecasts</h3><p>Use your spending patterns to plan ahead with confidence and clarity.</p><span class="card-arrow">→</span></article></div><div class="features-cta reveal" id="how-it-works"><div><span>Ready when you are</span><h3>Start building better money habits today.</h3></div><a href="home.html" class="btn-primary-large">Open Dashboard <span>→</span></a></div></section>
-    <footer><span>© 2026 FinSmart</span><span>Pure logic. Pure control.</span></footer>
-  </main>
-  <script src="landing.js"></script>
-</body>
-</html>
+
+        <header class="site-header" id="top">
+            <nav class="nav-shell" aria-label="Main navigation">
+                <a class="brand" href="#top" aria-label="FinSmart home">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span style="font-size: 1.3rem;">FinSmart</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <!-- <li><a href="#pricing">Pricing</a></li> -->
+                    <li><a href="#faq">FAQ</a></li>
+                    <!-- <li><a href="home.html">Home</a></li> -->
+                </ul>
+                <div class="nav-actions">
+                    <button id="landing-theme-toggle" class="theme-icon-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+                        <span aria-hidden="true">☀</span>
+                    </button>
+                    <a class="btn btn-dashboard glow" href="home.html">Open Dashboard</a>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section class="hero section reveal">
+                <div class="hero-copy">
+                    <p class="eyebrow">Rule-based intelligence</p>
+                    <h1>
+                        <span class="gradient-text">Master Your Money with Mathematical Precision</span>
+                    </h1>
+                    <p class="hero-sub">
+                        Track expenses, automate budgets, and predict your financial future without relying on AI. Pure
+                        logic, pure control.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="home.html">Start Tracking Free</a>
+                        <a class="btn btn-secondary" href="#features">Explore features</a>
+                    </div>
+                    <div class="hero-metrics" aria-label="Trust indicators">
+                        <div><strong>Your data stays private</strong></div>
+                        <div><strong>Built for clarity.</strong></div>
+                    </div>
+                </div>
+
+                <div class="hero-dashboard-wrap">
+                    <article class="dashboard tilt-card" aria-label="FinSmart dashboard preview">
+                        <div class="dash-glow" aria-hidden="true"></div>
+                        <div class="dashboard-top">
+                            <p>finsmart / overview</p>
+                            <span>available balance</span>
+                        </div>
+                        <p class="balance-value">₹24,860.40</p>
+                        <div class="chart-area">
+                            <div class="chart-head" aria-hidden="true">
+                                <span>Cash flow</span>
+                                <span>Monthly goal</span>
+                            </div>
+                            <div class="line-chart" role="img" aria-label="Animated cash flow chart">
+                                <svg viewBox="0 0 340 120" preserveAspectRatio="none" aria-hidden="true">
+                                    <path
+                                        class="line-track"
+                                        d="M0 86 C 40 70, 75 94, 110 68 C 150 35, 190 85, 225 56 C 260 28, 305 42, 340 20"
+                                    ></path>
+                                    <path
+                                        class="line-main"
+                                        d="M0 86 C 40 70, 75 94, 110 68 C 150 35, 190 85, 225 56 C 260 28, 305 42, 340 20"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="bars" aria-hidden="true">
+                                <span style="--h: 48%"></span>
+                                <span style="--h: 66%"></span>
+                                <span style="--h: 54%"></span>
+                                <span style="--h: 82%"></span>
+                                <span style="--h: 72%"></span>
+                            </div>
+                        </div>
+                        <div class="dash-grid">
+                            <div class="goal-ring">
+                                <svg viewBox="0 0 120 120" aria-hidden="true">
+                                    <circle cx="60" cy="60" r="48" class="ring-base"></circle>
+                                    <circle cx="60" cy="60" r="48" class="ring-progress"></circle>
+                                </svg>
+                                <div class="ring-label">
+                                    <strong>73%</strong>
+                                    <span>Monthly goal</span>
+                                </div>
+                            </div>
+                            <div class="warning-card" role="status" aria-live="polite">
+                                <p>Food budget alert</p>
+                                <strong>₹1,275 / ₹1,500</strong>
+                                <span>You are at 85% of your limit</span>
+                            </div>
+                        </div>
+                        <div class="float-objects" aria-hidden="true">
+                            <span class="orb orb-a"></span>
+                            <span class="orb orb-b"></span>
+                            <span class="coin coin-a"></span>
+                            <span class="coin coin-b"></span>
+                            <span class="mini-chart"></span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="features" class="section reveal">
+                <div class="section-head">
+                    <h2>Explore smarter ways to manage your money</h2>
+                    <p>Simple tools, clear insights, and practical guardrails for every financial decision.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card tilt-card reveal-stagger">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 18h16M7 15l3-4 3 2 4-6" />
+                                <circle cx="7" cy="15" r="1.5" />
+                                <circle cx="10" cy="11" r="1.5" />
+                                <circle cx="13" cy="13" r="1.5" />
+                                <circle cx="17" cy="7" r="1.5" />
+                            </svg>
+                        </div>
+                        <h3>Expense tracking</h3>
+                        <p>Log every purchase in seconds and understand exactly where your money goes.</p>
+                    </article>
+                    <article class="feature-card featured tilt-card reveal-stagger">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3v18M3 12h18" />
+                                <path d="M5 5l14 14" />
+                            </svg>
+                        </div>
+                        <h3>Smart budgets</h3>
+                        <p>Set category limits and receive a clear alert before you exceed them.</p>
+                    </article>
+                    <article class="feature-card tilt-card reveal-stagger">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 8h16M7 8V5h10v3M6 8l1 11h10l1-11" />
+                                <path d="M10 12h4M10 15h4" />
+                            </svg>
+                        </div>
+                        <h3>Financial forecasts</h3>
+                        <p>Use your spending patterns to plan ahead with confidence and clarity.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="how-it-works" class="section reveal">
+                <div class="section-head">
+                    <p class="eyebrow">How It Works</p>
+                    <h2>From data to confident decisions in minutes</h2>
+                </div>
+                <ol class="steps">
+                    <li><strong>Connect</strong> your accounts and import transaction history securely.</li>
+                    <li><strong>Calibrate</strong> goals, limits, and tolerance to match your financial strategy.</li>
+                    <li><strong>Execute</strong> with live dashboards, alerts, and optimization suggestions.</li>
+                </ol>
+            </section>
+
+            <section id="testimonials" class="section reveal">
+                <div class="section-head">
+                    <p class="eyebrow">No black box</p>
+                    <h2>People who like knowing exactly why a number moved</h2>
+                    <p>Real accounts from people who traded AI guesswork for rules they set themselves.</p>
+                </div>
+                <div class="feature-grid testimonial-grid">
+                    <article class="feature-card testimonial-card tilt-card reveal-stagger">
+                        <div class="feature-icon quote-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H5.5C5.5 10.6 6.6 9.5 8 9.5V8Z" />
+                                <path d="M17 8c-2.2 0-4 1.8-4 4v5h5v-5h-2.5c0-1.4 1.1-2.5 2.5-2.5V8Z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-quote">My income swings every month. Watching the forecast update after each invoice keeps my savings plan honest without me obsessing over it.</p>
+                        <p class="testimonial-name"><strong>Priya M.</strong> — Freelance Designer</p>
+                    </article>
+                    <article class="feature-card featured testimonial-card tilt-card reveal-stagger">
+                        <div class="feature-icon quote-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H5.5C5.5 10.6 6.6 9.5 8 9.5V8Z" />
+                                <path d="M17 8c-2.2 0-4 1.8-4 4v5h5v-5h-2.5c0-1.4 1.1-2.5 2.5-2.5V8Z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-quote">The food budget alert has saved me more times than I'd like to admit. It's just math, and math doesn't let me off the hook.</p>
+                        <p class="testimonial-name"><strong>Arjun K.</strong> — Product Manager</p>
+                    </article>
+                    <article class="feature-card testimonial-card tilt-card reveal-stagger">
+                        <div class="feature-icon quote-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H5.5C5.5 10.6 6.6 9.5 8 9.5V8Z" />
+                                <path d="M17 8c-2.2 0-4 1.8-4 4v5h5v-5h-2.5c0-1.4 1.1-2.5 2.5-2.5V8Z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-quote">No "AI insights" I can't explain. Every number on my dashboard traces back to a rule I set myself.</p>
+                        <p class="testimonial-name"><strong>Neha S.</strong> — Graduate Student</p>
+                    </article>
+                </div>
+            </section>
+
+            <!--<section id="pricing" class="section reveal">
+                <div class="section-head">
+                    <p class="eyebrow">Pricing</p>
+                    <h2>Two plans. No surprise math.</h2>
+                    <p>Start free, upgrade only when the rules you need outgrow the free tier.</p>
+                </div>
+                <div class="pricing-grid">
+                    <article class="feature-card price-card tilt-card reveal-stagger">
+                        <div class="price-head">
+                            <h3>Starter</h3>
+                            <p class="price-tag">₹0<span>/month</span></p>
+                        </div>
+                        <p>Everything you need to see where your money goes.</p>
+                        <ul class="price-list">
+                            <li>Unlimited expense logging</li>
+                            <li>3 budget categories</li>
+                            <li>Monthly forecast</li>
+                            <li>Email limit alerts</li>
+                        </ul>
+                        <a class="btn btn-secondary price-cta" href="home.html">Start free</a>
+                    </article>
+                    <article class="feature-card featured price-card tilt-card reveal-stagger">
+                        <div class="price-head">
+                            <h3>Precision</h3>
+                            <p class="price-tag">₹299<span>/month</span></p>
+                        </div>
+                        <p>For anyone tracking multiple goals or income streams.</p>
+                        <ul class="price-list">
+                            <li>Unlimited budget categories</li>
+                            <li>Weekly rolling forecasts</li>
+                            <li>Custom alert thresholds</li>
+                            <li>CSV export</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a class="btn btn-primary price-cta" href="home.html">Go Precision</a>
+                    </article>
+                </div>
+            </section>-->
+
+            <section id="faq" class="section reveal">
+                <div class="section-head">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Questions people ask before they connect an account</h2>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Does FinSmart use AI to categorize my spending?</summary>
+                        <p>No. Every category, forecast, and alert comes from rules you set or adjust yourself, so you always know why a number moved.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is my financial data stored securely?</summary>
+                        <p>Yes. Your data is encrypted and kept private — FinSmart doesn't sell or share it with third parties.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I connect my bank accounts?</summary>
+                        <p>You can import transaction history securely or log expenses manually — whichever keeps your numbers most accurate.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I cancel anytime?</summary>
+                        <p>Yes. Switch plans or cancel whenever you like — there's no lock-in period.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does it work on mobile?</summary>
+                        <p>The dashboard is fully responsive, so budgets, alerts, and forecasts work the same on your phone.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="section closeout reveal">
+                <div class="closeout-card tilt-card">
+                    <p class="eyebrow">Ready when you are</p>
+                    <div style="display: flex; justify-content: space-between;">
+                    <h2 style="font-size: 1.8rem;">Start building better money habits today.</h2>
+                    <a style="margin-bottom: 13px;" class="btn btn-primary" href="home.html">Open Dashboard</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© <span id="year"></span> FinSmart. Built for precise financial progress.</p>
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="home.html">Dashboard</a>
+            </div>
+        </footer>
+
+        <script src="landing.js"></script>
+    </body>
+    </html>
